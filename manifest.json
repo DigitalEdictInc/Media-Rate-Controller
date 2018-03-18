@@ -3,8 +3,8 @@
 
   "name": "HTML5 Media Rate Controller",
   "short_name": "MRC",
-  "description": "MRC allows changing video and audio playback rate giving you full control over speed with which your browser plays HTML5 media.",
-  "version": "1.0.0",
+  "description": "HTML5 Media Rate Controller allows changing video and audio playback rate and time giving you full control over speed with which your browser plays HTML5 media.",
+  "version": "1.0.1",
 
   "icons": {
     "16":  "icon-16x16.png",
@@ -28,5 +28,14 @@
       "js": ["content_main.js"],
       "all_frames": true
     }
-  ]
+  ],
+  "commands": {
+    "toggle-feature-foo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle feature foo"
+    }
+  }
 }

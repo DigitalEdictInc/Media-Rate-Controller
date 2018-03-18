@@ -2,6 +2,7 @@ var PRCPopup = {
     MAX_PLAYBACK_RATE: 100.0,
     MIN_PLAYBACK_RATE: 0.1,
     PLAYBACK_RATE_STEP: 0.1,
+    PLAYBACK_RATE_STEP10: 1.0,
     SHOW_DECIMAL_PLACES: 2,
     CSS_CLASS_HIDDEN: 'hidden',
 
@@ -149,7 +150,7 @@ var PRCPopup = {
         var me = this;
 
         if (me.playbackRate < me.MAX_PLAYBACK_RATE) {
-            me.playbackRate = Math.round((me.playbackRate + me.PLAYBACK_RATE_STEP) * 10) / 10.0;
+            me.playbackRate = Math.round((me.playbackRate + me.PLAYBACK_RATE_STEP10) * 10) / 10.0;
 
             me.updatePlaybackRate()
         }
@@ -159,7 +160,7 @@ var PRCPopup = {
         var me = this;
 
         if (me.playbackRate > me.MIN_PLAYBACK_RATE) {
-            me.playbackRate = Math.round((me.playbackRate - me.PLAYBACK_RATE_STEP) * 100) / 10.0;
+            me.playbackRate = Math.round((me.playbackRate - me.PLAYBACK_RATE_STEP) * 10) / 10.0;
 
             me.updatePlaybackRate()
         }
@@ -169,7 +170,7 @@ var PRCPopup = {
         var me = this;
 
         if (me.playbackRate > me.MIN_PLAYBACK_RATE) {
-            me.playbackRate = Math.round((me.playbackRate - me.PLAYBACK_RATE_STEP) * 100) / 10.0;
+            me.playbackRate = Math.round((me.playbackRate - me.PLAYBACK_RATE_STEP10) * 10) / 10.0;
 
             me.updatePlaybackRate()
         }
